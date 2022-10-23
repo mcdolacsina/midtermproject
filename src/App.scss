@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+@mixin flex($direction: column, $justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+$bg: #233747;
+$box-shadow: 0 0 2px #68687e;
+$text: #fff;
+$difficulty-btn: #f1f1f1;
+$difficulty-hover: #8e96ae;
+$difficulty-checked: #909dad;
+$btn: #acb5bd;
+$btn-hover: #4c8cdf;
+$timer: #f22;
+$final-screen-heading: #2b7ce7;
+$correct: #00e900;
+$wrong: #ff4a4a;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+#app {
+  min-height: 100vh;
+  @include flex();
+  color: $text;
+  font-family: "Poppins", sans-serif;
+  background: $bg;
+
+  main {
+    width: 100%;
+    margin: 10px 0;
+    @include flex();
+  }
+
+  button {
+    transition: 0.3s;
+    padding: 10px 0;
+    font-size: 1.3rem;
+    margin: 30px auto;
+    width: 200px;
+    background: $btn;
+    color: black;
+    border: 0;
+    box-shadow: $box-shadow;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background: $btn-hover;
+      transform: scale(1.05);
+    }
+  }
+}
